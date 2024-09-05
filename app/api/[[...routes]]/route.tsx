@@ -11,14 +11,14 @@ const app = new Frog({
   basePath: '/api',
   // Supply a Hub to enable frame verification.
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
-  title: 'Frog Frame',
+  title: 'Polygon - Farcaster Frames Grants',
 });
 
 // Uncomment to use Edge Runtime
 // export const runtime = 'edge'
 
 const baseUrl = process.env.VERCEL_URL
-  ? 'https://wenath-game.vercel.app'
+  ? 'https://polygon-farcaster-grants-frames.vercel.app'
   : 'http://localhost:3000';
 
 app.frame('/', (c) => {

@@ -65,8 +65,8 @@ app.frame('/polygon-frames-grants', (c) => {
   return c.res({
     image: `${baseUrl}/images/yes-path/frame-3.png`,
     intents: [
-      <Button action="/applications">i didn't know this!</Button>,
-      <Button action="/applications">tell me more</Button>,
+      <Button action="/applications-new">i didn't know this!</Button>,
+      <Button action="/applications-new">tell me more</Button>,
     ],
   });
 });
@@ -74,6 +74,20 @@ app.frame('/polygon-frames-grants', (c) => {
 app.frame('/applications', (c) => {
   return c.res({
     image: `${baseUrl}/images/yes-path/frame-4.png`,
+    intents: [
+      <Button.Link href="https://forum.polygon.technology/t/announcing-the-farcaster-frame-innovators-program/19655">
+        gimme more info
+      </Button.Link>,
+      <Button.Link href="https://explorer.gitcoin.co/#/round/137/25">
+        click to apply
+      </Button.Link>,
+    ],
+  });
+});
+
+app.frame('/applications-new', (c) => {
+  return c.res({
+    image: `${baseUrl}/images/yes-path/frame-5-yes.png`,
     intents: [
       <Button.Link href="https://forum.polygon.technology/t/announcing-the-farcaster-frame-innovators-program/19655">
         gimme more info
